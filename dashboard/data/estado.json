@@ -1,0 +1,97 @@
+{
+  "actualizado": "2026-10-27T12:00:00Z",
+  "nivel_actual": 0,
+  "mision_actual": null,
+  "paso": {
+    "titulo": "Empezar el proyecto",
+    "que": "Escribe \"sigamos\" en el chat o pulsa el botón Sigamos. Claude leerá docs/PROGRESS.md y te presentará el nivel 0.",
+    "porque": "Cada sesión empieza situándonos: dónde estamos y qué toca ahora.",
+    "empresa_real": "Un sysadmin empieza el día revisando la cola de tickets y sus notas del día anterior antes de tocar nada.",
+    "comprobar": null,
+    "snapshot": null
+  },
+  "siguientes": [
+    "Presentación del nivel 0: la empresa, sus misiones y qué vas a aprender",
+    "Preguntas una a una sobre cómo quieres diseñar la empresa",
+    "Escribir el plan del nivel 0 en docs/plans/"
+  ],
+  "niveles": [
+    { "numero": 0, "nombre": "Diseño de la empresa", "estado": "pendiente", "misiones": [
+      { "id": "0.1", "titulo": "Confirmar datos de la empresa y CSV de 30 empleados", "estado": "pendiente" },
+      { "id": "0.2", "titulo": "Diseñar dominio, IPs, nombres, usuarios, grupos y OUs", "estado": "pendiente" },
+      { "id": "0.3", "titulo": "Diagrama de red inicial e inventario", "estado": "pendiente" },
+      { "id": "0.4", "titulo": "Crear el repo en GitHub", "estado": "pendiente" },
+      { "id": "0.5", "titulo": "Descargas y comprobaciones previas", "estado": "pendiente" }
+    ]},
+    { "numero": 1, "nombre": "La oficina abre: AD, DNS, DHCP y GPO", "estado": "pendiente", "misiones": [
+      { "id": "1.1", "titulo": "Montar DC01 y promoverlo a controlador de dominio", "estado": "pendiente" },
+      { "id": "1.2", "titulo": "OUs por departamento y alta de 30 usuarios desde CSV", "estado": "pendiente" },
+      { "id": "1.3", "titulo": "Carpetas por departamento con permisos AGDLP", "estado": "pendiente" },
+      { "id": "1.4", "titulo": "Alta de Laura y baja de Marc", "estado": "pendiente" },
+      { "id": "1.5", "titulo": "GPOs: fondo, unidades de red y bloqueo USB", "estado": "pendiente" },
+      { "id": "1.6", "titulo": "Unir PC01 al dominio y cuenta admin separada", "estado": "pendiente" }
+    ]},
+    { "numero": 2, "nombre": "Llegan los Linux", "estado": "pendiente", "misiones": [
+      { "id": "2.1", "titulo": "SRV-LINUX01: usuarios, sudo, SSH con clave y UFW", "estado": "pendiente" },
+      { "id": "2.2", "titulo": "Intranet con nginx", "estado": "pendiente" },
+      { "id": "2.3", "titulo": "Recurso Samba para albaranes", "estado": "pendiente" },
+      { "id": "2.4", "titulo": "Actualizaciones automáticas y logs", "estado": "pendiente" }
+    ]},
+    { "numero": 3, "nombre": "Service desk con GLPI", "estado": "pendiente", "misiones": [
+      { "id": "3.1", "titulo": "Instalar GLPI con su base de datos", "estado": "pendiente" },
+      { "id": "3.2", "titulo": "Categorias, prioridades y SLAs", "estado": "pendiente" },
+      { "id": "3.3", "titulo": "Tickets de prueba y resolverlos", "estado": "pendiente" },
+      { "id": "3.4", "titulo": "Inventario automático con el agente", "estado": "pendiente" }
+    ]},
+    { "numero": 4, "nombre": "Monitorización: Zabbix y Grafana", "estado": "pendiente", "misiones": [
+      { "id": "4.1", "titulo": "Zabbix vigilando DC01, SRV-LINUX01 y PC01", "estado": "pendiente" },
+      { "id": "4.2", "titulo": "Alertas de disco, servicio y caída", "estado": "pendiente" },
+      { "id": "4.3", "titulo": "Dashboard en Grafana para Dirección", "estado": "pendiente" },
+      { "id": "4.4", "titulo": "Provocar un fallo y comprobar la alerta", "estado": "pendiente" }
+    ]},
+    { "numero": 5, "nombre": "Backups con Veeam", "estado": "pendiente", "misiones": [
+      { "id": "5.1", "titulo": "Política 3-2-1, RTO y RPO", "estado": "pendiente" },
+      { "id": "5.2", "titulo": "Copias programadas de DC01 y SRV-LINUX01", "estado": "pendiente" },
+      { "id": "5.3", "titulo": "Restaurar la carpeta de facturas de marzo", "estado": "pendiente" },
+      { "id": "5.4", "titulo": "Restauración completa cronometrada", "estado": "pendiente" }
+    ]},
+    { "numero": 6, "nombre": "Automatizar: PowerShell y Ansible", "estado": "pendiente", "misiones": [
+      { "id": "6.1", "titulo": "Script de altas y bajas desde CSV de RRHH", "estado": "pendiente" },
+      { "id": "6.2", "titulo": "Informe semanal de cuentas y contraseñas", "estado": "pendiente" },
+      { "id": "6.3", "titulo": "Inventario de equipos a CSV", "estado": "pendiente" },
+      { "id": "6.4", "titulo": "Ansible para los Ubuntu", "estado": "pendiente" }
+    ]},
+    { "numero": 7, "nombre": "A la nube: Entra ID, Azure y Terraform", "estado": "pendiente", "misiones": [
+      { "id": "7.1", "titulo": "Entra Connect: sincronizar AD con Entra ID", "estado": "pendiente" },
+      { "id": "7.2", "titulo": "Seguridad por defecto y cuentas de emergencia", "estado": "pendiente" },
+      { "id": "7.3", "titulo": "Página de estado con Terraform y GitHub Actions", "estado": "pendiente" },
+      { "id": "7.4", "titulo": "Presupuesto con alerta y limpieza", "estado": "pendiente" }
+    ]},
+    { "numero": 8, "nombre": "Microsoft 365 e Intune", "estado": "pendiente", "misiones": [
+      { "id": "8.1", "titulo": "Licencias por grupos, buzones y pedidos@", "estado": "pendiente" },
+      { "id": "8.2", "titulo": "Teams y SharePoint por departamento", "estado": "pendiente" },
+      { "id": "8.3", "titulo": "MFA y acceso condicional", "estado": "pendiente" },
+      { "id": "8.4", "titulo": "Intune: PC01, BitLocker, cumplimiento y app", "estado": "pendiente" },
+      { "id": "8.5", "titulo": "Documentar todo y cancelar la prueba", "estado": "pendiente" }
+    ]},
+    { "numero": 9, "nombre": "Seguridad y simulacro de ransomware", "estado": "pendiente", "misiones": [
+      { "id": "9.1", "titulo": "Wazuh con alertas de login y grupos privilegiados", "estado": "pendiente" },
+      { "id": "9.2", "titulo": "Endurecimiento básico de Windows y Ubuntu", "estado": "pendiente" },
+      { "id": "9.3", "titulo": "Simulacro seguro: detectar, aislar y recuperar", "estado": "pendiente" },
+      { "id": "9.4", "titulo": "README final y lineas de CV", "estado": "pendiente" }
+    ]}
+  ],
+  "laboratorio": {
+    "vms": [],
+    "ultimo_snapshot": null
+  },
+  "dudas": [],
+  "logros": [],
+  "glosario": [],
+  "avisos": [
+    { "tipo": "info", "texto": "Coste del proyecto: 0 €. Cualquier recurso de pago se avisa antes." },
+    { "tipo": "info", "texto": "Las evaluaciones de Windows duran 180 días: la fecha de caducidad se apunta al instalar cada VM." },
+    { "tipo": "info", "texto": "La prueba de Microsoft 365 se activa solo en el nivel 8, con recordatorio para cancelarla." }
+  ],
+  "coste_eur": 0
+}

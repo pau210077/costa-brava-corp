@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Costa Brava Corp</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="marca">
+      <svg class="marca-icono" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 21c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 4 3" /><path d="M2 27c4 0 4-3 8-3s4 3 8 3 4-3 8-3 4 3 4 3" /><path d="M9 14l7-9 7 9" /></svg>
+      <div>
+        <h1>Costa Brava Corp</h1>
+        <p class="marca-sub">Consola de IT de la oficina de Blanes</p>
+      </div>
+    </div>
+    <div class="global" aria-label="Progreso global">
+      <div class="global-texto"><span id="global-pct">0 %</span> del proyecto completado</div>
+      <div class="barra"><div class="barra-relleno" id="global-barra"></div></div>
+    </div>
+    <div class="acciones">
+      <span class="conexion" id="conexion" data-estado="conectando">Conectando</span>
+      <button class="btn-sec" id="btn-nueva">Nueva sesión</button>
+      <button class="btn-sec btn-apagar" id="btn-apagar">Apagar</button>
+    </div>
+  </header>
+
+  <div class="aviso-urgente" id="avisos-urgentes" hidden></div>
+
+  <main class="rejilla">
+    <section class="col-trabajo">
+      <p class="ultimo" id="ultimo" hidden>
+        <span class="ultimo-etiqueta">Lo último que hiciste</span>
+        <span class="ultimo-fecha" id="ultimo-fecha"></span>
+        <span class="ultimo-texto" id="ultimo-texto"></span>
+      </p>
+      <article class="orden" id="ahora" aria-labelledby="ahora-titulo">
+        <div class="orden-cabecera">
+          <span class="orden-nivel" id="ahora-nivel">Nivel 0</span>
+          <span class="orden-mision" id="ahora-mision">Sin misión abierta</span>
+          <span class="estado-chip" id="ahora-estado" data-estado="en_curso">En curso</span>
+        </div>
+        <h2 class="orden-titulo" id="ahora-titulo">Cargando…</h2>
+
+        <div class="snapshot" id="ahora-snapshot" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg>
+          <div><strong>Haz un snapshot antes de seguir.</strong> <span id="ahora-snapshot-texto"></span></div>
+        </div>
+
+        <div class="orden-cuerpo">
+          <section class="bloque bloque-que">
+            <h3>Qué hacer</h3>
+            <div class="md" id="ahora-que"></div>
+          </section>
+          <section class="bloque">
+            <h3>Por qué</h3>
+            <div class="md" id="ahora-porque"></div>
+          </section>
+          <section class="bloque">
+            <h3>En una empresa real</h3>
+            <div class="md" id="ahora-empresa"></div>
+          </section>
+          <section class="bloque bloque-comprobar" id="ahora-comprobar" hidden>
+            <h3>Cómo comprobarlo</h3>
+            <div class="cmd">
+              <pre><code id="ahora-cmd"></code></pre>
+              <button class="copiar" data-copiar="ahora-cmd">Copiar</button>
+            </div>
+            <p class="esperado"><span>Resultado esperado:</span> <span id="ahora-esperado"></span></p>
+          </section>
+        </div>
+      </article>
+
+      <section class="siguiente" aria-labelledby="sig-titulo">
+        <h2 id="sig-titulo">Después de esto</h2>
+        <ol id="siguientes"></ol>
+      </section>
+
+      <section class="pestanas">
+        <div class="pestanas-barra" role="tablist" aria-label="Paneles">
+          <button role="tab" aria-selected="true" data-tab="progreso">Progreso</button>
+          <button role="tab" aria-selected="false" data-tab="diario">Diario <span class="cuenta" id="n-diario"></span></button>
+          <button role="tab" aria-selected="false" data-tab="lab">Laboratorio</button>
+          <button role="tab" aria-selected="false" data-tab="dudas">Dudas <span class="cuenta" id="n-dudas"></span></button>
+          <button role="tab" aria-selected="false" data-tab="logros">Logros CV <span class="cuenta" id="n-logros"></span></button>
+          <button role="tab" aria-selected="false" data-tab="glosario">Glosario <span class="cuenta" id="n-glosario"></span></button>
+          <button role="tab" aria-selected="false" data-tab="avisos">Avisos <span class="cuenta" id="n-avisos"></span></button>
+        </div>
+        <div class="pestana" role="tabpanel" id="tab-progreso"></div>
+        <div class="pestana" role="tabpanel" id="tab-diario" hidden></div>
+        <div class="pestana" role="tabpanel" id="tab-lab" hidden></div>
+        <div class="pestana" role="tabpanel" id="tab-dudas" hidden></div>
+        <div class="pestana" role="tabpanel" id="tab-logros" hidden></div>
+        <div class="pestana" role="tabpanel" id="tab-glosario" hidden></div>
+        <div class="pestana" role="tabpanel" id="tab-avisos" hidden></div>
+      </section>
+    </section>
+
+    <section class="col-chat" id="chat-col" aria-label="Chat con Claude">
+      <div class="chat-mensajes" id="mensajes" aria-live="polite"></div>
+      <div class="pensando" id="pensando" hidden>
+        <span class="puntos" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span id="pensando-texto">Pensando…</span>
+      </div>
+
+      <div class="rapidos" aria-label="Botones rápidos">
+        <div class="grupo">
+          <button class="rap rap-principal" data-msg="Sigamos">Sigamos</button>
+          <button class="rap rap-principal" data-msg="Hecho">Hecho</button>
+        </div>
+        <div class="grupo grupo-escalera" aria-label="Escalera de ayuda">
+          <button class="rap" data-msg="Pista">Pista</button>
+          <button class="rap" data-msg="Otra pista">Otra pista</button>
+          <button class="rap" data-msg="Solución">Solución</button>
+        </div>
+        <div class="grupo">
+          <button class="rap" data-msg="Revisa">Revisa</button>
+          <button class="rap" data-msg="Estoy atascado">Estoy atascado</button>
+          <button class="rap" data-msg="Explícamelo">Explícamelo</button>
+        </div>
+        <div class="grupo">
+          <button class="rap" data-msg="Examen">Examen</button>
+          <button class="rap" data-msg="Cierra sesión">Cierra sesión</button>
+          <button class="rap" data-msg="Resumen CV">Resumen CV</button>
+        </div>
+      </div>
+
+      <form class="entrada" id="form">
+        <div class="adjuntos" id="adjuntos" hidden></div>
+        <textarea id="texto" rows="2" placeholder="Escribe aquí. Puedes pegar o arrastrar una captura." aria-label="Mensaje para Claude"></textarea>
+        <div class="entrada-acciones">
+          <label class="btn-adjuntar" title="Adjuntar captura">
+            <input type="file" id="archivo" accept="image/png,image/jpeg,image/gif,image/webp" multiple hidden>
+            Adjuntar captura
+          </label>
+          <span class="ayuda">Enter envía, Mayús+Enter salta de línea</span>
+          <button type="submit" class="btn-enviar" id="btn-enviar">Enviar</button>
+        </div>
+      </form>
+      <div class="soltar" id="soltar" hidden>Suelta la captura para adjuntarla</div>
+    </section>
+  </main>
+
+  <dialog class="permiso" id="permiso" aria-labelledby="permiso-titulo">
+    <h2 id="permiso-titulo">Claude quiere hacer algo</h2>
+    <p class="permiso-accion" id="permiso-accion"></p>
+    <pre class="permiso-detalle" id="permiso-detalle"></pre>
+    <p class="permiso-nota" id="permiso-nota" hidden></p>
+    <div id="permiso-extra"></div>
+    <p class="permiso-aviso">Solo se hará si pulsas Aprobar. Si no lo tienes claro, deniega y pregunta en el chat.</p>
+    <div class="permiso-botones">
+      <button class="btn-denegar" id="permiso-no" autofocus>Denegar</button>
+      <button class="btn-aprobar" id="permiso-si">Aprobar</button>
+    </div>
+  </dialog>
+
+  <div class="apagado" id="apagado" hidden>
+    <h2>Dashboard apagado</h2>
+    <p>Ya puedes cerrar esta pestaña. Para volver, haz doble clic en <strong>Costa Brava Corp</strong> en el escritorio.</p>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

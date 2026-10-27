@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Datos locales del dashboard: historial del chat, id de sesión, logs
+dashboard/.local/
+*.log
+
+# Secretos
+.env
+*.pem
+*.key
+
+# Sistema
+Thumbs.db
+desktop.ini
+.playwright-mcp/

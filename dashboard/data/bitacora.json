@@ -103,5 +103,40 @@
     "mision": "0.4",
     "texto": "Misión 0.3 cerrada. Empieza la 0.4 (GitHub, la hace Pau). El repo no tiene remoto todavía; .gitignore revisado (excluye node_modules, dashboard/.local y .env). Paso 1 de 3: commit del trabajo de hoy.",
     "siguiente": "Pau hace git add + commit y pega git status; después, paso 2: crear el repositorio en la web de GitHub."
+  },
+  {
+    "fecha": "2026-10-27 13:43",
+    "nivel": 0,
+    "mision": "0.4",
+    "texto": "A petición de Pau, Claude hace el commit e33d51f 'Nivel 0: plan, empleados, diseño, diagrama e inventario' (7 archivos, autor Pau Miró). Árbol limpio. Planteado paso 2: repo público o privado y aviso del email visible en commits.",
+    "siguiente": "Pau decide público/privado (y si oculta el email); después, crear el repo en la web de GitHub."
+  },
+  {
+    "fecha": "2026-10-27 13:45",
+    "nivel": 0,
+    "mision": "0.4",
+    "texto": "Repo público decidido. Pau pide que al apagar se conserve el chat: comprobado en server.js que ya es así (historial en dashboard/.local/historial.json y misma sesión; solo 'Nueva sesión' lo archiva). Paso 2: crear el repo costa-brava-corp vacío en github.com.",
+    "siguiente": "Pau crea el repo en GitHub, pasa la URL y dice si oculta el email; después, paso 3: conectar y push."
+  },
+  {
+    "fecha": "2026-10-27 13:46",
+    "nivel": 0,
+    "mision": "0.4",
+    "texto": "Pau autoriza a Claude a crear el repo y subirlo. gh 2.103.2 instalado pero sin sesión: Pau debe hacer gh auth login. Pendiente que diga si oculta el email antes del push.",
+    "siguiente": "Pau hace gh auth login y responde lo del email; después Claude crea costa-brava-corp público, revisa archivos y hace push."
+  },
+  {
+    "fecha": "2026-10-27 13:48",
+    "nivel": 0,
+    "mision": "0.4",
+    "texto": "Pau decide ocultar su email en los commits (noreply de GitHub). Claude lanza gh auth login --web; el código de un solo uso caducó sin autorizar (context deadline exceeded). No hay sesión de gh todavía.",
+    "siguiente": "Cuando Pau diga 'listo', relanzar gh auth login y que autorice al momento; después reescribir email de los 2 commits locales, crear el repo público y push."
+  },
+  {
+    "fecha": "2026-10-27 14:16",
+    "nivel": 0,
+    "mision": "0.4",
+    "texto": "gh autenticado como pau210077. Email oculto: user.email del repo pasa al noreply de GitHub, los 2 commits locales reescritos (sin push previo) y CLAUDE.md actualizado. Revisados los archivos: sin contraseñas, tokens ni email personal.",
+    "siguiente": "Crear costa-brava-corp público y push; después, que Pau marque 'Keep my email addresses private' en GitHub y pasar a la 0.5."
   }
 ]

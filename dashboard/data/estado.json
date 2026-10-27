@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-10-27T13:42:00+01:00",
+  "actualizado": "2026-10-27T14:16:00+01:00",
   "nivel_actual": 0,
   "mision_actual": "0.4",
   "paso": {
-    "titulo": "Misión 0.4 · Paso 1 de 3: commit del trabajo de hoy",
-    "que": "**Misión 0.3 cerrada ✔.**\n\n**Misión 0.4 · Subir el proyecto a GitHub.** Esto lo haces tú. Son 3 pasos; hoy va el **paso 1 de 3: guardar el trabajo de hoy en un commit**.\n\nUn **commit** es una \"foto\" del proyecto con un mensaje que dice qué cambió. De momento solo existe en tu PC.\n\n**Qué haces:**\n1. Abre PowerShell en la carpeta `proyectoempresa` (Explorador → clic derecho dentro de la carpeta → *Abrir en Terminal*).\n2. Mira qué ha cambiado:\n```\ngit status\n```\nVerás en rojo los archivos de hoy: plan, CSV, diseño, diagrama, inventario y el panel.\n3. Prepáralos todos para el commit:\n```\ngit add .\n```\n4. Haz el commit:\n```\ngit commit -m \"Nivel 0: plan, empleados, diseño, diagrama e inventario\"\n```\n5. Ejecuta el comando de \"Comprobar\" y pégame lo que salga.\n\nHe revisado antes el `.gitignore`: deja fuera `node_modules`, el historial del chat (`dashboard/.local/`) y cualquier `.env`. No se sube nada privado.",
-    "porque": "Sin commit, si se te estropea el PC pierdes el trabajo. Con commits frecuentes y mensajes claros puedes volver a cualquier punto y, en GitHub, cualquiera (un reclutador también) ve cómo has avanzado.",
-    "empresa_real": "Los equipos de sistemas guardan scripts y documentación en Git igual que los programadores: si un cambio rompe algo, se mira qué commit lo introdujo y se vuelve atrás.",
-    "comprobar": {"comando":"git status","esperado":"nothing to commit, working tree clean (o en castellano: nada para hacer commit, el árbol de trabajo está limpio)"},
+    "titulo": "Misión 0.4 · Paso 3 de 3: subir a GitHub",
+    "que": "Sesión de GitHub iniciada. Email oculto: los commits usan el email anónimo de GitHub. Subiendo el repo `costa-brava-corp`...",
+    "porque": "gh guarda un token en el Administrador de credenciales de Windows, así no hay que escribir contraseñas en ningún archivo ni comando. Por seguridad, el inicio de sesión lo haces tú: nadie más debe ver tu contraseña de GitHub.",
+    "empresa_real": "Los administradores trabajan igual con Azure (az login) o M365: se inicia sesión una vez en el navegador, con MFA, y la herramienta guarda un token temporal en lugar de la contraseña.",
+    "comprobar": null,
     "snapshot": null,
     "estado": "en_curso"
   },

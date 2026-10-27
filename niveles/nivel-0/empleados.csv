@@ -1,0 +1,31 @@
+Nombre,Apellido1,Apellido2,Usuario,Departamento,Cargo,Responsable,Extension,TienePC,FechaAlta
+Montserrat,Puig,Ferrer,mpuig,Direccion,Gerente,,101,si,2012-03-01
+Albert,Roca,Soler,aroca,Direccion,Director comercial,mpuig,102,si,2014-09-15
+Núria,Vidal,Costa,nvidal,Administracion,Responsable de administración,mpuig,111,si,2013-01-10
+Laura,García,Puig,lgarcia,Administracion,Contable,nvidal,112,si,2016-05-02
+Lluís,García,Pons,lgarciap,Administracion,Contable,nvidal,113,si,2019-02-18
+Marta,Font,Bosch,mfont,Administracion,Técnica de RRHH,nvidal,114,si,2018-11-05
+Cristina,Mas,Pujol,cmas,Administracion,Recepcionista,nvidal,110,si,2021-06-01
+Jordi,Serra,Camps,jserra,Compras,Jefe de compras,mpuig,121,si,2015-04-20
+Anna,Riera,Sala,ariera,Compras,Compradora,jserra,122,si,2020-01-13
+David,Ortega,Ruiz,dortega,Compras,Comprador,jserra,123,si,2022-09-05
+Xavier,Torres,Mir,xtorres,Ventas,Jefe de ventas,aroca,131,si,2014-02-03
+Sergi,Martínez,López,smartinez,Ventas,Comercial,xtorres,132,si,2016-03-14
+Elena,Sánchez,Gil,esanchez,Ventas,Comercial,xtorres,133,si,2017-10-02
+Pere,Coll,Vila,pcoll,Ventas,Comercial,xtorres,134,si,2019-05-06
+Judit,Martínez,Roig,jmartinez,Ventas,Comercial,xtorres,135,si,2021-02-01
+Oriol,Bonet,Prat,obonet,Ventas,Comercial,xtorres,136,si,2023-04-17
+Sílvia,Navarro,Ramos,snavarro,Ventas,Atención al cliente,xtorres,137,si,2020-07-01
+Iván,Moreno,Díaz,imoreno,Ventas,Atención al cliente,xtorres,138,si,2024-01-08
+Clara,Ferrer,Comas,cferrer,Marketing,Responsable de marketing,aroca,141,si,2018-02-12
+Marc,Juncosa,Planas,mjuncosa,Marketing,Diseñador gráfico,cferrer,142,si,2022-03-21
+Josep,Pujol,Casas,jpujol,Logistica,Jefe de almacén,mpuig,151,si,2012-06-04
+Rosa,Domènech,Valls,rdomenech,Logistica,Administrativa de logística,jpujol,152,si,2017-01-09
+Antonio,Fernández,Romero,afernandez,Logistica,Mozo de almacén,jpujol,153,no,2015-08-24
+Hassan,El Amrani,,helamrani,Logistica,Mozo de almacén,jpujol,153,no,2018-04-03
+Raúl,Gómez,Herrera,rgomez,Logistica,Mozo de almacén,jpujol,153,no,2020-10-19
+Ferran,Soler,Bassols,fsoler,Logistica,Mozo de almacén,jpujol,153,no,2023-06-12
+Joan,Vila,Grau,jvila,Logistica,Mozo de almacén,jpujol,153,no,2025-02-03
+Miquel,Casals,Pou,mcasals,Logistica,Repartidor,jpujol,154,no,2019-09-02
+Toni,Ruiz,Ortiz,truiz,Logistica,Repartidor,jpujol,154,no,2024-05-27
+Àlex,Prats,Ribas,aprats,IT,Técnico de sistemas,mpuig,160,si,2026-10-26

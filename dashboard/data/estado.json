@@ -1,26 +1,27 @@
 {
-  "actualizado": "2026-10-27T12:00:00Z",
+  "actualizado": "2026-10-27T13:42:00+01:00",
   "nivel_actual": 0,
-  "mision_actual": null,
+  "mision_actual": "0.4",
   "paso": {
-    "titulo": "Empezar el proyecto",
-    "que": "Escribe \"sigamos\" en el chat o pulsa el botón Sigamos. Claude leerá docs/PROGRESS.md y te presentará el nivel 0.",
-    "porque": "Cada sesión empieza situándonos: dónde estamos y qué toca ahora.",
-    "empresa_real": "Un sysadmin empieza el día revisando la cola de tickets y sus notas del día anterior antes de tocar nada.",
-    "comprobar": null,
-    "snapshot": null
+    "titulo": "Misión 0.4 · Paso 1 de 3: commit del trabajo de hoy",
+    "que": "**Misión 0.3 cerrada ✔.**\n\n**Misión 0.4 · Subir el proyecto a GitHub.** Esto lo haces tú. Son 3 pasos; hoy va el **paso 1 de 3: guardar el trabajo de hoy en un commit**.\n\nUn **commit** es una \"foto\" del proyecto con un mensaje que dice qué cambió. De momento solo existe en tu PC.\n\n**Qué haces:**\n1. Abre PowerShell en la carpeta `proyectoempresa` (Explorador → clic derecho dentro de la carpeta → *Abrir en Terminal*).\n2. Mira qué ha cambiado:\n```\ngit status\n```\nVerás en rojo los archivos de hoy: plan, CSV, diseño, diagrama, inventario y el panel.\n3. Prepáralos todos para el commit:\n```\ngit add .\n```\n4. Haz el commit:\n```\ngit commit -m \"Nivel 0: plan, empleados, diseño, diagrama e inventario\"\n```\n5. Ejecuta el comando de \"Comprobar\" y pégame lo que salga.\n\nHe revisado antes el `.gitignore`: deja fuera `node_modules`, el historial del chat (`dashboard/.local/`) y cualquier `.env`. No se sube nada privado.",
+    "porque": "Sin commit, si se te estropea el PC pierdes el trabajo. Con commits frecuentes y mensajes claros puedes volver a cualquier punto y, en GitHub, cualquiera (un reclutador también) ve cómo has avanzado.",
+    "empresa_real": "Los equipos de sistemas guardan scripts y documentación en Git igual que los programadores: si un cambio rompe algo, se mira qué commit lo introdujo y se vuelve atrás.",
+    "comprobar": {"comando":"git status","esperado":"nothing to commit, working tree clean (o en castellano: nada para hacer commit, el árbol de trabajo está limpio)"},
+    "snapshot": null,
+    "estado": "en_curso"
   },
   "siguientes": [
-    "Presentación del nivel 0: la empresa, sus misiones y qué vas a aprender",
-    "Preguntas una a una sobre cómo quieres diseñar la empresa",
-    "Escribir el plan del nivel 0 en docs/plans/"
+    "0.4 paso 2: crear el repositorio en la web de GitHub",
+    "0.4 paso 3: conectar y subir (push), revisando antes qué se sube",
+    "Misión 0.5: descargas y comprobaciones del PC"
   ],
   "niveles": [
-    { "numero": 0, "nombre": "Diseño de la empresa", "estado": "pendiente", "misiones": [
-      { "id": "0.1", "titulo": "Confirmar datos de la empresa y CSV de 30 empleados", "estado": "pendiente" },
-      { "id": "0.2", "titulo": "Diseñar dominio, IPs, nombres, usuarios, grupos y OUs", "estado": "pendiente" },
-      { "id": "0.3", "titulo": "Diagrama de red inicial e inventario", "estado": "pendiente" },
-      { "id": "0.4", "titulo": "Crear el repo en GitHub", "estado": "pendiente" },
+    { "numero": 0, "nombre": "Diseño de la empresa", "estado": "en_curso", "misiones": [
+      { "id": "0.1", "titulo": "Confirmar datos de la empresa y CSV de 30 empleados", "estado": "hecho" },
+      { "id": "0.2", "titulo": "Diseñar dominio, IPs, nombres, usuarios, grupos y OUs", "estado": "hecho" },
+      { "id": "0.3", "titulo": "Diagrama de red inicial e inventario", "estado": "hecho" },
+      { "id": "0.4", "titulo": "Crear el repo en GitHub", "estado": "en_curso" },
       { "id": "0.5", "titulo": "Descargas y comprobaciones previas", "estado": "pendiente" }
     ]},
     { "numero": 1, "nombre": "La oficina abre: AD, DNS, DHCP y GPO", "estado": "pendiente", "misiones": [
@@ -86,7 +87,7 @@
     "ultimo_snapshot": null
   },
   "dudas": [],
-  "logros": [],
+  "logros": ["Plantilla de 30 empleados en CSV lista para automatizar altas", "Documento de diseño de AD, red y nombres con decisiones justificadas"],
   "glosario": [],
   "avisos": [
     { "tipo": "info", "texto": "Coste del proyecto: 0 €. Cualquier recurso de pago se avisa antes." },

@@ -5,5 +5,103 @@
     "mision": null,
     "texto": "Fase A terminada: repositorio creado y dashboard funcionando (chat con Claude, panel de estado, confirmación de acciones y arranque desde el escritorio).",
     "siguiente": "Empezar el nivel 0 pulsando Sigamos."
+  },
+  {
+    "fecha": "2026-10-27 12:58",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Empieza el nivel 0. Presentación del nivel puesta en el panel y planteada la pregunta 1 (reparto de departamentos).",
+    "siguiente": "Pau responde la pregunta 1; después, pregunta 2 (formato de nombres de usuario)."
+  },
+  {
+    "fecha": "2026-10-27 12:59",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 1: Pau quiere más departamentos con roles distintos. Propuesta de 7 departamentos (Dirección, Administración, Compras, Ventas, Marketing, Logística, IT) con roles, en el panel.",
+    "siguiente": "Pau confirma o ajusta la propuesta; después, pregunta 2 (formato de nombres de usuario)."
+  },
+  {
+    "fecha": "2026-10-27 13:00",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 1 cerrada: Pau aprueba los 7 departamentos con roles. Pregunta si Claude puede crear los CSV: sí, si lo pide con 'hazlo tú' y lo aprueba en el dashboard. Planteada la pregunta 2 (formato del usuario).",
+    "siguiente": "Pau responde la pregunta 2 (A nombre.apellido, B inicial+apellido, C inicial+apellidos)."
+  },
+  {
+    "fecha": "2026-10-27 13:04",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 2 cerrada: usuario inicial+apellido (lgarcia); si se repite, +inicial 2º apellido y luego número. Pau prefiere que Claude cree los archivos de datos (CSV) y se los explique. Planteada la pregunta 3 (columnas del CSV).",
+    "siguiente": "Pau responde la pregunta 3 (A mínimo, B completo, C propia)."
+  },
+  {
+    "fecha": "2026-10-27 13:07",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 3 cerrada: CSV completo (Nombre, Apellido1, Apellido2, Usuario, Departamento, Cargo, Responsable, Extension, TienePC, FechaAlta; coma, UTF-8). Explicado cómo parar y retomar (Cierra sesión, Apagar, mañana Sigamos). Planteada la pregunta 4 (nombre del dominio).",
+    "siguiente": "Pau responde la pregunta 4 (A costabrava.local, B corp.costabravacorp.es, C propia)."
+  },
+  {
+    "fecha": "2026-10-27 13:09",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 4 cerrada: dominio corp.costabravacorp.es, NetBIOS COSTABRAVA. Aclarado que panel y bitácora se guardan solos en cada avance: Apagar no pierde nada. Planteada la pregunta 5 (rango de IPs).",
+    "siguiente": "Pau responde la pregunta 5 (A 192.168.50.0/24, B 10.10.0.0/24, C 10.0.2.0/24)."
+  },
+  {
+    "fecha": "2026-10-27 13:11",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 5 cerrada: red 10.77.0.0/24 (rango poco común porque Pau mueve el portátil entre redes). DC01 .10, SRV-LINUX01 .20, servidores .21-.49, dispositivos .50-.99, DHCP .100-.199. Confirmado que con Apagar basta. Planteada la pregunta 6 (nombres de equipos).",
+    "siguiente": "Pau responde la pregunta 6 (A tipo+número, B departamento, C etiqueta)."
+  },
+  {
+    "fecha": "2026-10-27 13:13",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 6 cerrada: equipos por tipo y número (DC01, SRV-LINUX01, PC01...). Pau pregunta si se documentará: sí, plan en docs/plans/nivel-0.md, diseño en la misión 0.2 e inventario en docs/inventario.md. Planteada la pregunta 7 (OUs y grupos).",
+    "siguiente": "Pau responde la pregunta 7; después, plan del nivel 0."
+  },
+  {
+    "fecha": "2026-10-27 13:14",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pregunta 7 cerrada: OUs separadas (CostaBrava > Usuarios por dpto, Equipos > Servidores/PCs, Grupos, Admins); grupos GG-<Dpto> y DL- para carpetas. Verificado en Microsoft Learn que los contenedores Users/Computers no admiten GPOs. Plan del nivel 0 puesto en el panel.",
+    "siguiente": "Pau crea docs/plans/nivel-0.md con el plan (o pide 'hazlo tú') y dice 'aprobado'; después, misión 0.1."
+  },
+  {
+    "fecha": "2026-10-27 13:17",
+    "nivel": 0,
+    "mision": null,
+    "texto": "Pau pide que los documentos (planes, docs) también los cree Claude. Creado docs/plans/nivel-0.md con todas las decisiones y las 5 misiones.",
+    "siguiente": "Pau lee el plan y dice 'aprobado'; después, misión 0.1 (CSV de 30 empleados)."
+  },
+  {
+    "fecha": "2026-10-27 13:30",
+    "nivel": 0,
+    "mision": "0.1",
+    "texto": "Plan del nivel 0 aprobado. Empieza la misión 0.1: Claude crea niveles/nivel-0/empleados.csv (30 empleados inventados, 7 departamentos, 23 con PC). Validado: 30 filas, sin usuarios repetidos, responsables existentes.",
+    "siguiente": "Pau ejecuta la comprobación del CSV en PowerShell y pega el resultado; después, cerrar 0.1 y pasar a 0.2 (documento de diseño)."
+  },
+  {
+    "fecha": "2026-10-27 13:35",
+    "nivel": 0,
+    "mision": "0.2",
+    "texto": "Pau pide que las comprobaciones locales de archivos también las haga Claude. Misión 0.1 cerrada (CSV validado: 30 filas, sin repetidos). Misión 0.2: creado niveles/nivel-0/diseno.md con cada decisión, lo descartado y el porqué.",
+    "siguiente": "Pau lee diseno.md y dice 'Hecho'; después, misión 0.3 (diagrama de red e inventario)."
+  },
+  {
+    "fecha": "2026-10-27 13:39",
+    "nivel": 0,
+    "mision": "0.3",
+    "texto": "Misión 0.2 cerrada (Pau leyó diseno.md). Misión 0.3: creado docs/diagramas/red-nivel-0.md (Mermaid) y rellenado docs/inventario.md con DC01, SRV-LINUX01 y PC01 planificados y la tabla de red.",
+    "siguiente": "Pau revisa diagrama e inventario y dice 'Hecho'; después, misión 0.4 (subir el repo a GitHub, lo hace Pau)."
+  },
+  {
+    "fecha": "2026-10-27 13:42",
+    "nivel": 0,
+    "mision": "0.4",
+    "texto": "Misión 0.3 cerrada. Empieza la 0.4 (GitHub, la hace Pau). El repo no tiene remoto todavía; .gitignore revisado (excluye node_modules, dashboard/.local y .env). Paso 1 de 3: commit del trabajo de hoy.",
+    "siguiente": "Pau hace git add + commit y pega git status; después, paso 2: crear el repositorio en la web de GitHub."
   }
 ]
